@@ -1,0 +1,23 @@
+<DOCTYPE html>
+<h1>
+<hreg> src img <link>
+<h2>
+// Hard to believe PhantomJS has no option parsing module.
+var port = 8080;
+var debug = false;
+var tests = [];
+var rest = [];
+while (argv.length > 0) {
+  var arg = argv.pop();
+  if (arg === "--port") {
+    port = +rest.pop();
+  } else if (arg === "--debug") {
+    debug = true;
+  } else if (arg === "--tests") {
+    while (rest.length > 0)
+      tests.push(rest.pop());
+  }
+  rest.push(arg);
+}
+<h1/>
+<hreg/>
